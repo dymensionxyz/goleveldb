@@ -154,7 +154,7 @@ func openDB(s *session) (*DB, error) {
 		}
 	} else {
 		db.closeW.Add(2)
-		go db.tCompaction()
+		// go db.tCompaction()
 		go db.mCompaction()
 		// go db.jWriter()
 	}
